@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: 'Controle de Ponto e Acesso com Spring Boot'

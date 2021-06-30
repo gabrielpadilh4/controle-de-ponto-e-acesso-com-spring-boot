@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/digital_innovation_one?useTimezone=true&serverTimezone=UTC
+    username: root
+    password: my-secure-password
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
