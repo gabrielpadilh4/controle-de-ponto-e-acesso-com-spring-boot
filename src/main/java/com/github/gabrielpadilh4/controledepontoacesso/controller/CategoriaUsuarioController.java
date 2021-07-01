@@ -39,6 +39,7 @@ public class CategoriaUsuarioController implements IControllerCrud<CategoriaUsua
 
     @DeleteMapping("/{idCategoria}")
     public ResponseEntity delete(@PathVariable("idCategoria") long idCategoria) {
+        categoriaUsuarioService.deleteById(idCategoria);
         return ResponseEntity.ok("Apagado com sucesso!");
     }
 }
