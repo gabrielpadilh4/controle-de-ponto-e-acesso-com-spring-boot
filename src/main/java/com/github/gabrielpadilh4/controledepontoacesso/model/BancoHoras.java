@@ -22,14 +22,16 @@ public class BancoHoras {
     @AllArgsConstructor
     @EqualsAndHashCode
     @Embeddable
-    public class BancoHorasId implements Serializable {
+    @Getter
+    @Setter
+    public static class BancoHorasId implements Serializable {
         private long idBancoHoras;
         private long idMovimentacao;
         private long idUsuario;
     }
 
     @EmbeddedId
-    private BancoHorasId bancoHorasId;
+    private BancoHorasId id;
     private LocalDateTime dataTrabalhada;
     private BigDecimal horasTrabalhadas;
     private BigDecimal saldoHorasTrabalhadas;

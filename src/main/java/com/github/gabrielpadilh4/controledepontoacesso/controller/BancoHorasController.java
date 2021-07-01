@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/banco-horas")
@@ -19,6 +20,8 @@ public class BancoHorasController implements IControllerCrud<BancoHoras> {
 
     @PostMapping
     public BancoHoras create(@RequestBody BancoHoras bancoHoras) {
+        UUID uuid = UUID.randomUUID();
+        bancoHoras.getId().setIdBancoHoras(uuid.getMostSignificantBits());
         return bancoHorasService.save(bancoHoras);
     }
 

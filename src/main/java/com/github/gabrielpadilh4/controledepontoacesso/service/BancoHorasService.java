@@ -32,7 +32,7 @@ public class BancoHorasService implements IServiceCrud<BancoHoras> {
 
     @Override
     public Optional<BancoHoras> findById(long id) {
-        return bancoHorasRepository.findById(id);
+        return bancoHorasRepository.findByMIdBancoHoras(id);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class BancoHorasService implements IServiceCrud<BancoHoras> {
 
     @Override
     public void deleteById(long id) {
-        bancoHorasRepository.deleteById(id);
+        bancoHorasRepository.deleteByMIdBancoHoras(id);
     }
 }

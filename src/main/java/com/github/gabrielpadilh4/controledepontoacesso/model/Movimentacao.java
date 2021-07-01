@@ -20,7 +20,9 @@ public class Movimentacao {
     @AllArgsConstructor
     @EqualsAndHashCode
     @Embeddable
-    public class MovimentacaoId implements Serializable {
+    @Getter
+    @Setter
+    public static class MovimentacaoId implements Serializable {
         private long idMovimento;
         private long idUsuario;
     }

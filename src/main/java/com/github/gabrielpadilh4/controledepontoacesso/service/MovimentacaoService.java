@@ -32,7 +32,7 @@ public class MovimentacaoService implements IServiceCrud<Movimentacao> {
 
     @Override
     public Optional<Movimentacao> findById(long id) {
-        return movimentacaoRepository.findById(id);
+        return movimentacaoRepository.findByMIdMovimento(id);
     }
 
     @Override
@@ -42,6 +42,6 @@ public class MovimentacaoService implements IServiceCrud<Movimentacao> {
 
     @Override
     public void deleteById(long id) {
-        movimentacaoRepository.deleteById(id);
+        movimentacaoRepository.deleteByMIdMovimento(id);
     }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/movimentacao")
@@ -17,8 +18,11 @@ public class MovimentacaoController implements IControllerCrud<Movimentacao> {
     @Autowired
     MovimentacaoService movimentacaoService;
 
-    @PostMapping
+    @PostMapping()
+    @Override
     public Movimentacao create(@RequestBody Movimentacao movimentacao) {
+        UUID uuid = UUID.randomUUID();
+        movimentacao.getId().setIdMovimento(uuid.getMostSignificantBits());
         return movimentacaoService.save(movimentacao);
     }
 
