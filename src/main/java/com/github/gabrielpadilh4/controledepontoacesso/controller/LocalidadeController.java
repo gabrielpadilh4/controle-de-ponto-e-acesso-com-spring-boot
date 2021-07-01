@@ -33,7 +33,7 @@ public class LocalidadeController implements IControllerCrud<Localidade> {
     }
 
     @GetMapping("/{idLocalidade}")
-    public ResponseEntity<Localidade> getById(@PathVariable("/{idLocalidade}") long idLocalidade) throws Exception {
+    public ResponseEntity<Localidade> getById(@PathVariable("idLocalidade") long idLocalidade) throws Exception {
         return ResponseEntity.ok(localidadeService.findById(idLocalidade).orElseThrow(() -> new NoSuchElementException("[ERROR] -> Localidade não encontrada!")));
     }
 
