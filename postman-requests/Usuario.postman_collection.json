@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "ba46c81c-20a2-4c63-a19e-3134f31aad28",
+		"name": "Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consultar Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Gabriel\",\r\n    \"categoriaUsuario\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Administração\"\r\n    },\r\n    \"empresa\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"NetShoes\",\r\n        \"cnpj\": \"123.456.122/20\",\r\n        \"endereco\": \"Rua das Amoreiras\",\r\n        \"bairro\": \"Ressaca\",\r\n        \"cidade\": \"Campinas\",\r\n        \"estado\": \"São Paulo\",\r\n        \"numeroTelefone\": \"3896-9200\"\r\n    },\r\n    \"nivelAcesso\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Gerente\"\r\n    },\r\n    \"jornadaTrabalho\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"PJ\"\r\n    },\r\n    \"toleranciaAtraso\": 0.05,\r\n    \"inicioJornada\": null,\r\n    \"fimJornada\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 33,\r\n    \"nome\": \"Gabriel\",\r\n    \"categoriaUsuario\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Administração\"\r\n    },\r\n    \"empresa\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"NetShoes\",\r\n        \"cnpj\": \"123.456.122/20\",\r\n        \"endereco\": \"Rua das Amoreiras\",\r\n        \"bairro\": \"Ressaca\",\r\n        \"cidade\": \"Campinas\",\r\n        \"estado\": \"São Paulo\",\r\n        \"numeroTelefone\": \"3896-9200\"\r\n    },\r\n    \"nivelAcesso\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"Gerente\"\r\n    },\r\n    \"jornadaTrabalho\": {\r\n        \"id\": 1,\r\n        \"descricao\": \"PJ\"\r\n    },\r\n    \"toleranciaAtraso\": 0.05,\r\n    \"inicioJornada\": \"2019-12-31T23:59:59\",\r\n    \"fimJornada\": \"2019-12-31T23:59:59\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/usuario/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuario",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

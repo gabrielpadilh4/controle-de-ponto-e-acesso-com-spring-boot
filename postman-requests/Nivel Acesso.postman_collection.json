@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "01ba49e3-8fb9-416e-b929-1a1e6098441e",
+		"name": "Nivel Acesso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Recuperar Niveis de Acesso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/nivel-acesso/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nivel-acesso",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Nivel de Acesso",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/nivel-acesso/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nivel-acesso",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Nivel de Acesso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"Recrutador\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nivel-acesso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nivel-acesso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Nivel de Acesso",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 34,\r\n        \"descricao\": \"Analista1\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/nivel-acesso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nivel-acesso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Nivel de Acesso",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/nivel-acesso/34",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"nivel-acesso",
+						"34"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

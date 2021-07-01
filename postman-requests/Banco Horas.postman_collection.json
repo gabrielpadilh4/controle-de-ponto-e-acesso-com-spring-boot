@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "a37b96ba-f357-45c9-ad19-4d4eb95b519d",
+		"name": "Banco Horas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Consulta Banco Horas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/banco-horas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banco-horas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar Banco Horas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"id\": {\r\n\t\t\"idMovimentacao\": 6015670992984559036,\r\n            \"idUsuario\": 1\r\n\t},\r\n\t\"dataTrabalhada\": \"2019-12-31T23:59:59\",\r\n\t\"horasTrabalhadas\": \"4\",\r\n\t\"saldoHorasTrabalhadas\": \"-5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/banco-horas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banco-horas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Banco Hora",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/banco-horas/8103109520328573854",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banco-horas",
+						"8103109520328573854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir Banco Horas",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/banco-horas/8103109520328573854",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banco-horas",
+						"8103109520328573854"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Banco Horas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": {\r\n            \"idBancoHoras\": 8283881711462203475,\r\n            \"idMovimentacao\": 6015670992984559036,\r\n            \"idUsuario\": 1\r\n        },\r\n        \"dataTrabalhada\": \"2019-12-31T23:59:59\",\r\n        \"horasTrabalhadas\": 4.00,\r\n        \"saldoHorasTrabalhadas\": 5.00\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/banco-horas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"banco-horas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

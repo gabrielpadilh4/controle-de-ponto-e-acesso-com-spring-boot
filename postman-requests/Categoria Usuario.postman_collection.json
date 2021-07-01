@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "c6b33db9-4ff9-4657-a493-fe76c3715158",
+		"name": "Categoria Usuario",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Criar Categoria Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"descricao\": \"Financeiro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/categoria-usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Categorias de Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Uma Categoria de Usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria-usuario/33",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria-usuario",
+						"33"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Categoria de Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 35,\r\n    \"descricao\": \"Logistica\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/categoria-usuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria-usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Apagar Categoria de Usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/categoria-usuario/36",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"categoria-usuario",
+						"36"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
